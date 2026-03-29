@@ -1,3 +1,7 @@
+---
+disable-model-invocation: true
+---
+
 # 성우하이텍 MW4 — 첫걸음: Claude Code 설치 + GitHub + 간단 실습
 
 > **목표**: CC 설치 + CLAUDE.md 기초 + GitHub 연동 + 플러그인 체험 + 부서별 실습

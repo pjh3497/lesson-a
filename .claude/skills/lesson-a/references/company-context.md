@@ -1,3 +1,7 @@
+---
+disable-model-invocation: true
+---
+
 # 성우하이텍 AI 마스터 과정 컨텍스트
 
 ## 강사
