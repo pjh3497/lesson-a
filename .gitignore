@@ -1,0 +1,10 @@
+node_modules/
+.lesson-memory/
+*.log
+.DS_Store
+organized/*.md
+!organized/.gitkeep
+analysis/*.md
+!analysis/.gitkeep
+reviews/*.md
+!reviews/.gitkeep
