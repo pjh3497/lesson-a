@@ -161,19 +161,28 @@ carl vellotti 방식: 목표를 먼저 말하고, 손이 멈추는 지점을 미
 
 ### Step 7 — 환경 자동 인식 사전 체크 (Practice 02 준비)
 강사 멘트:
-"다음 실습에서는 플러그인을 설치합니다. 그런데 URL을 타이핑할 필요가 없어요. 이 폴더에 이미 강사가 마켓플레이스를 등록해뒀거든요. 지금 미리 확인해봅시다."
+"다음 실습에서는 플러그인을 설치하고 Git을 씁니다. 그런데 URL을 타이핑하거나 권한을 일일이 허용할 필요가 없어요. 이 폴더에 이미 강사가 마켓플레이스와 권한 설정을 등록해뒀거든요. 지금 미리 확인해봅시다."
 
 **ACTION**
-- 채팅창에 `/plugins` 입력 → 창이 열리면 **Marketplaces 탭** 클릭
-- **gptaku**, **tofukyung-plugins** 두 항목이 보이면 정상. 오늘은 설치 없이 닫기만 한다.
-- 안 보이면 VSCode 명령 팔레트(Ctrl+Shift+P) → `Developer: Reload Window` → 재확인.
+1. 채팅창에 `/plugins` 입력 → 창이 열리면 **Marketplaces 탭** 클릭
+2. **gptaku**, **tofukyung-plugins** 두 항목이 보이면 정상. 오늘은 설치 없이 닫기만 한다.
+3. 안 보이면 VSCode 명령 팔레트(Ctrl+Shift+P) → `Developer: Reload Window` → 재확인.
+4. 다음으로 Git 권한이 자동으로 적용되어 있는지 확인한다. 채팅창에 아래 한 문장만 입력:
+   ```
+   git --version 실행해서 버전 알려줘
+   ```
+5. Claude가 **승인 팝업 없이** 바로 실행하고 git 버전을 출력하면 OK. 팝업이 뜨면 이 폴더의 `.claude/settings.json`에 있는 `permissions.allow`가 로드되지 않은 것 → Reload Window 후 재시도.
+
+강사 멘트:
+"승인 팝업 없이 실행됐죠? 이건 이 폴더가 `.claude/settings.json`에 `Bash(git:*)` 같은 권한을 미리 허용해뒀기 때문이에요. 다음 실습에서 Git을 쓸 때 매번 허용 버튼을 누를 필요가 없어집니다."
 
 **USER**
 - `/plugins` → Marketplaces 탭에서 두 마켓플레이스 인식 확인
+- `git --version` 자연어 요청이 팝업 없이 통과하는지 확인
 - 창을 닫고 Practice 01 마무리
 
 **STOP**
-- 마켓플레이스가 안 보이는 수강생은 강사가 즉시 지원 (Practice 02의 준비 작업)
+- 마켓플레이스가 안 보이거나 git 명령에 승인 팝업이 뜨는 수강생 → 강사가 즉시 지원 (Reload Window → `.claude/settings.json` 존재 재확인)
 - 이 단계는 **설치가 아니라 확인**임을 분명히 할 것
 
 ## 트러블슈팅
@@ -198,3 +207,4 @@ carl vellotti 방식: 목표를 먼저 말하고, 손이 멈추는 지점을 미
 - [ ] 실습 폴더 열기 완료
 - [ ] `안녕하세요!` 응답 확인
 - [ ] `/plugins` Marketplaces 탭에서 gptaku + tofukyung-plugins 자동 인식 확인
+- [ ] `git --version` 자연어 요청이 승인 팝업 없이 통과 (project-scope permissions 로드 확인)

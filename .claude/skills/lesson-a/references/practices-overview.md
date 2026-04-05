@@ -91,8 +91,34 @@ AI가 "나는 Claude입니다" 같은 자기 부정/혼란을 보이면, SCRIPT_
 
 **lesson-a 레포의 대응**
 - `.claude/settings.json`에 `extraKnownMarketplaces`로 gptaku, tofukyung-plugins 사전 등록 → 수강생이 폴더 열면 Marketplaces 탭에 자동 표시 (이건 버그와 무관하게 잘 동작)
+- `.claude/settings.json`에 `permissions.allow` project-scope 설정 → `Bash(git:*)`, `Bash(gh:*)`, 기본 파일 I/O가 사전 승인되어 수강생이 **매 명령마다 승인 팝업을 보지 않음** (git-teacher 플러그인과 Claude 네이티브 Git 워크플로우 모두 여기서 혜택)
 - 실제 플러그인 설치는 **강사가 수업 전 수동 사전 세팅**(옵션 B) 또는 **lesson-a 안에 필요한 것만 직접 번들**(옵션 C) 경로로 우회
 - Practice 02는 `/plugins` UI를 **구경만** 하는 수준으로 축소하고, 실제 실습은 Claude 네이티브 기능으로 진행
+
+### Permission 시스템 — 첫 설치자가 막히는 숨은 원인
+
+> **발견 경위**: 현장에서 git-teacher 플러그인이 일부 PC에서만 잘 동작하는 문제가 있었는데, 원인은 서브모듈이 아니라 **Claude Code의 Permission(allowlist) 시스템**이었음. 이미 터미널에서 git/gh 패턴을 승인해둔 PC에서는 잘 동작했고, 첫 설치자 PC에서는 매 명령마다 승인 팝업이 뜨거나 막혔음.
+
+**작동 원리**
+- Claude Code는 Bash 명령을 실행하기 전에 패턴 기반으로 permission 검사
+- `.claude/settings.json`의 `permissions.allow`에 등록된 패턴은 팝업 없이 자동 실행
+- 등록 안 된 패턴은 사용자에게 매번 승인 요청 → 초보자는 당황
+
+**lesson-a의 사전 허용 목록** (project-scope, `.claude/settings.json` 내)
+```
+permissions.allow:
+  - Bash(git:*), Bash(gh:*) — git-teacher + Claude 네이티브 Git 워크플로우
+  - Bash(ls:*), Bash(cat:*), Bash(pwd), Bash(mkdir:*) 등 기본 유틸
+  - Read(**), Write(**), Edit(**), Glob(**), Grep(**) — 파일 I/O 전반
+
+permissions.deny (위험 명령 차단):
+  - Bash(rm -rf:*), Bash(sudo:*), Bash(curl:*), Bash(wget:*)
+  - Read(./.env), Read(./.env.*), Read(./secrets/**)
+  - Read(~/.ssh/**), Read(~/.aws/**)
+```
+
+**검증 방법** (Practice 01 Step 7)
+수강생이 lesson-a 폴더를 연 직후 채팅창에 "`git --version` 실행해서 버전 알려줘"라고 입력했을 때 승인 팝업 없이 즉시 결과가 나오면 project-scope permissions가 정상 로드된 것. 팝업이 뜨면 `.claude/settings.json`이 로드되지 않은 것 → Reload Window 후 재시도.
 
 ### `/plugins` UI 정확한 구조 (공식 문서 기준)
 

@@ -1,6 +1,6 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-settings",
-  "_comment": "수강생이 이 폴더를 열면 Claude Code VSCode extension이 자동으로 아래 마켓플레이스를 인식합니다. /plugins 입력 → Plugins 탭 안의 Available plugins 섹션에서 Install 버튼 클릭. (Anthropic #17293 submodule 버그로 설치가 비어있을 수 있음)",
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_comment_marketplaces": "수강생이 이 폴더를 열면 Claude Code VSCode extension이 자동으로 아래 마켓플레이스를 인식합니다. /plugins 입력 → Plugins 탭 안의 Available plugins 섹션에서 Install 버튼 클릭. (Anthropic #17293 submodule 버그로 설치가 비어있을 수 있음)",
   "extraKnownMarketplaces": {
     "gptaku": {
       "source": {
@@ -14,5 +14,39 @@
         "repo": "treylom/tofukyung-plugins"
       }
     }
+  },
+  "_comment_permissions": "git-teacher 플러그인과 Claude 네이티브 Git 워크플로우가 초보 수강생 PC에서 매끄럽게 동작하도록 사전 승인 목록. 수강생이 매 git/gh 명령마다 승인 팝업을 만나지 않도록 project-scope로 허용합니다. 위험한 명령(rm -rf, curl, sudo 등)은 allow하지 않습니다.",
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(git)",
+      "Bash(gh)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(pwd)",
+      "Bash(echo:*)",
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(which:*)",
+      "Read(**)",
+      "Write(**)",
+      "Edit(**)",
+      "Glob(**)",
+      "Grep(**)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)"
+    ]
   }
 }
