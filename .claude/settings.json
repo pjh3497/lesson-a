@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings",
+  "_comment": "수강생이 이 폴더를 열면 Claude Code VSCode extension이 자동으로 아래 마켓플레이스를 인식합니다. /plugins 입력 후 Discover 탭에서 Install 버튼만 누르면 됩니다.",
+  "extraKnownMarketplaces": {
+    "gptaku": {
+      "source": {
+        "source": "github",
+        "repo": "fivetaku/gptaku_plugins"
+      }
+    },
+    "tofukyung-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "treylom/tofukyung-plugins"
+      }
+    }
+  }
+}

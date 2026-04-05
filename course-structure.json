@@ -2,8 +2,17 @@
   "course": {
     "name": "성우하이텍 AI 마스터 과정",
     "code": "lesson-a",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "author": "tofukyung"
+  },
+  "target_environment": {
+    "runtime": "claude-code-vscode-extension",
+    "min_version": "2.0.0",
+    "recommended_version": "2.1.92",
+    "os": "windows-10-11",
+    "cli_available": false,
+    "gh_cli_available": false,
+    "notes": "수강생은 Claude Code VSCode extension만 사용. 모든 실습은 사이드바 채팅창, 명령 팔레트, Source Control 패널에서 완료 가능해야 함. 외부 자료 인용 시 CLI 전용 단계는 VSCode 경로로 변환 필수."
   },
   "practices": [
     {

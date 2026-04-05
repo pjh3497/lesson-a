@@ -71,24 +71,39 @@
 - 디자인보다 정보 전달 우선
 
 ### Step 3 — GitHub push + Vercel 배포
+
+> **환경 주의**: VSCode extension은 Vercel 연동을 직접 수행하지 못합니다. push까지는 Claude가, Vercel 배포는 브라우저에서 진행합니다. 강사가 사전에 `vercel.com` 로그인을 시연으로 보여주세요.
+
+#### 3-1. GitHub push (Claude 자연어 경로)
 **ACTION**
-1. `저장해줘`
-2. `올려줘`
-3. Vercel에서 저장소 import
-4. 기본 설정으로 배포
-5. 생성된 URL 확인
+- Claude Code 채팅창에:
+  1. `저장해줘` → Claude가 HTML 파일 포함 commit
+  2. `올려줘` → Claude가 push 실행
+- Practice 02에서 통과한 VSCode 인증이 그대로 유지되므로 추가 대화상자 없이 push 완료.
+- 풀렸다면 Practice 02 Step 6-3 재실행 또는 Source Control(Ctrl+Shift+G) → `...` → Push.
+
+#### 3-2. Vercel 배포 (브라우저 작업)
+**ACTION**
+1. 브라우저에서 [vercel.com](https://vercel.com) 접속 → GitHub 계정으로 로그인 (처음이면 Authorize)
+2. 대시보드 → `Add New...` → `Project`
+3. `Import Git Repository` 섹션에서 본인의 lesson-a 레포를 찾아 `Import` 클릭
+4. Framework Preset: **Other** 선택 (순수 HTML이므로)
+5. Root Directory: 기본값 그대로 (HTML 파일이 루트에 있다면) 또는 HTML 폴더 지정
+6. `Deploy` 클릭
+7. 1~2분 대기 후 배포 완료 → 생성된 URL(`https://your-project.vercel.app`)을 새 탭에서 열어 확인
 
 강사 멘트:
-"여기서 중요한 건 완벽한 웹앱이 아니라, 내 결과물이 인터넷 링크가 된다는 경험입니다."
+"여기서 중요한 건 완벽한 웹앱이 아니라, 내 결과물이 인터넷 링크가 된다는 경험입니다. Vercel은 브라우저에서만 만지면 되니까 VSCode로 돌아올 필요 없어요."
 
 **USER**
-- GitHub push
-- Vercel import
+- GitHub push 완료
+- vercel.com 로그인
+- 레포 Import → Deploy
 - 배포 URL 복사
 
 **STOP**
 - URL이 실제로 열리는지 확인
-- 배포 실패 시 정적 HTML 기준으로 다시 단순화
+- 배포 실패 시 정적 HTML 기준으로 다시 단순화 (Framework Preset: Other 재확인)
 
 ### Step 4 — 그룹 공유
 공유 항목:
@@ -113,8 +128,11 @@
 
 ## 트러블슈팅
 - HTML이 너무 밋밋함 → 카드 3개 + 표 1개만 유지하고 진행
-- Vercel 배포 실패 → 파일 구조 단순화 후 재시도
-- GitHub push가 안 됨 → 인증 상태 재확인
+- Vercel 배포 실패 ("Framework detection failed") → Framework Preset을 `Other`로 변경 후 재배포
+- Vercel 빌드 에러 → Root Directory 확인. HTML이 루트가 아니면 해당 폴더 경로 지정
+- Vercel이 레포를 못 찾음 → Vercel 설정 → Git → GitHub Integration에서 리포지토리 접근 권한 재확인
+- GitHub push가 안 됨 → VSCode Source Control(Ctrl+Shift+G) 패널로 폴백
+- VSCode 인증이 풀림 → Practice 02 Step 6-3 재실행
 - 시간 부족 → 배포는 강사 시연 중심, 그룹은 링크 생성까지만 경험
 
 ## 강사 운영 팁

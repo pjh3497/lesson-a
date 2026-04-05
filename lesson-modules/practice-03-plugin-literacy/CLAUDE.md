@@ -61,26 +61,33 @@
 강사 멘트:
 "이제 이름 공부가 아니라, 지금 내 화면에서 실제로 쓸 수 있는 것들을 둘러봅니다."
 
+> **환경 확인**: 수강생은 VSCode extension입니다. 아래는 모두 Claude Code 채팅창 입력 기준.
+
 **ACTION**
-1. `/plugin list`를 다시 실행하게 한다.
-2. `/plugins`를 열어 plugin 관리 화면을 직접 보게 한다.
+1. 채팅창에 `/plugins`를 입력해 **Manage plugins UI**를 연다.
+2. 4개 탭을 한 바퀴 돌게 한다.
+   - **Discover** → 설치 가능한 플러그인 목록 (마켓플레이스에서 제공 중인 것)
+   - **Installed** → 내가 설치한 플러그인 + 토글(on/off)
+   - **Marketplaces** → 등록된 마켓플레이스 목록 (gptaku, tofukyung-plugins가 보여야 정상)
+   - **Errors** → 로딩 오류 확인 (비어 있으면 정상)
 3. 아래를 행동 중심으로 짧게 짚는다.
-   - 바르다-깃선생 = 저장해줘 / 올려줘 흐름을 도와주는 Git capability
-   - docs-guide = 공식 문서 기준으로 덜 헷갈리게 찾는 capability
-   - tofukyung-plugins = 강의/업무 연결에 쓰는 capability 묶음
-   - using-superpowers / brainstorming 계열 = 바로 답하게 하기보다 먼저 순서를 잡게 도와주는 workflow capability
+   - **바르다-깃선생** = 저장해줘 / 올려줘 흐름을 도와주는 Git capability (보조)
+   - **docs-guide** = 공식 문서 기준으로 덜 헷갈리게 찾는 capability
+   - **prompt-engineering-skills / knowledge-manager** = 강의/업무 연결에 쓰는 capability 묶음
+   - **using-superpowers / brainstorming 계열** = 바로 답하게 하기보다 먼저 순서를 잡게 도와주는 workflow capability
 4. 전원이 **설치된 capability 1개를 직접 실행**하게 한다.
    - 권장 공통 예시: `Plan 모드가 뭐야? 공식 문서 기준으로 3줄로 설명해줘`
    - 또는 강사가 지정한 설치된 capability 1개
 
 **USER**
-- `/plugin list` 실행
-- `/plugins` 열기
+- `/plugins` 4탭 확인 (Discover, Installed, Marketplaces, Errors)
+- Installed 탭에서 내 플러그인 토글 상태 확인
 - 설치된 capability 1개 직접 실행
 
 **STOP**
 - 전원이 capability 1개를 실제로 실행했는지 확인
 - 결과가 어색해도 괜찮고, "실행해봤다"가 먼저입니다.
+- Installed 탭이 비어 있는 수강생 → Practice 02 Step 2로 돌아가 재설치
 
 ### Step 3 — using-superpowers 확인 + brainstorming 체험
 강사 멘트:
@@ -122,8 +129,9 @@
 - 어려워하면 "이름 설명"보다 "내 업무에서 언제 쓸지"를 더 중요하게 남기게 한다.
 
 ## 트러블슈팅
-- `/plugin list`가 기대와 다름 → 설치 누락부터 다시 확인
-- `/plugins`를 못 찾음 → 강사가 화면으로 1회만 다시 보여주기
+- `/plugins` 입력해도 반응 없음 → Claude Code extension 버전 확인, Reload Window
+- Installed 탭이 비어 있음 → Practice 02 Step 2 재진행
+- Marketplaces 탭에 gptaku/tofukyung-plugins 안 보임 → `.claude/settings.json` 로드 실패 → Reload Window
 - capability 실행 결과가 어색함 → 결과 품질보다 직접 실행 완료를 우선
 - `my-installed-tools.md`가 너무 이론적으로 됨 → "언제 쓸지" 문장을 먼저 보강
 
@@ -136,8 +144,8 @@
 "이제 여러분은 설치된 도구를 그냥 이름으로만 아는 게 아니라, 하나를 직접 실행했고, 내 업무에서 언제 쓸지까지 적었습니다. 다음 실습에서는 이 감각을 자기 부서 데이터에 직접 붙여봅니다."
 
 ## 체크리스트
-- [ ] `/plugin list` 확인 완료
-- [ ] `/plugins` 확인 완료
+- [ ] `/plugins` 4탭 확인 완료 (Discover/Installed/Marketplaces/Errors)
+- [ ] Installed 탭에서 본인 플러그인 토글 ON 확인
 - [ ] 설치된 capability 1개 직접 실행 완료
 - [ ] brainstorming 비교 체험 완료
 - [ ] `my-installed-tools.md` 생성 완료

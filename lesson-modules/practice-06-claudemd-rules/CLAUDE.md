@@ -145,9 +145,11 @@
 
 **클로징:**
 ```
-"저장해줘" → commit (CLAUDE.md 포함)
-"올려줘" → GitHub push
+Claude Code 채팅창에:
+"저장해줘"  → Claude가 git add + commit 실행 (CLAUDE.md 포함)
+"올려줘"    → Claude가 git push 실행 (VSCode가 인증 캐시 재사용)
 ```
+> Practice 02에서 통과한 VSCode 인증은 유지되어 있습니다. 인증이 풀렸다면 Practice 02 Step 6-3 재실행.
 
 ## 트러블슈팅
 - 규칙이 길어짐 → 한 줄 행동 규칙으로 축약
