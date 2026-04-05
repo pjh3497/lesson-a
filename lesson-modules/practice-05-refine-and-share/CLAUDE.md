@@ -52,16 +52,16 @@
 
 **ACTION**
 1. Claude Code 채팅창에 `/plugins`를 입력해 Manage plugins UI를 다시 연다.
-2. **Installed 탭**에서 현재 토글 ON 상태인 플러그인 목록을 확인한다.
+2. **Plugins 탭**에서 Installed plugins(위쪽) / Available plugins(아래쪽) 섹션 상태를 확인한다.
 3. **Marketplaces 탭**에서 gptaku, tofukyung-plugins가 여전히 등록되어 있는지 확인한다.
-4. 필요하면 **Discover 탭**에서 아직 설치하지 않은 플러그인 하나를 추가로 Install 해본다. (선택)
-5. `/reload-plugins`를 한 번 실행해 반영한다.
+4. (선택) Available plugins에서 하나를 추가로 Install 해본다. 슬래시 커맨드가 등록 안 되면 submodule 버그(#17293)일 가능성 — 오늘 실습엔 무관.
+5. 설치 후 배너가 뜨면 클릭, 안 뜨면 `Developer: Reload Window` 실행.
 6. docs-guide처럼 공식 문서 기준 도구가 왜 안전장치가 되는지 한 번 더 짚는다.
 7. 각자 "이 흐름을 내 업무에서 언제 다시 열어볼지" 한 줄 메모하게 한다.
 
 **USER**
-- `/plugins` UI 재방문
-- Installed / Marketplaces 탭 상태 확인
+- `/plugins` UI 재방문 (탭 2개: Plugins / Marketplaces)
+- Plugins 탭 Installed / Available 섹션 상태 확인
 - (선택) 추가 플러그인 1개 Install
 - 다시 써볼 상황 1개 메모
 

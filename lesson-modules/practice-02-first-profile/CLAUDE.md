@@ -56,56 +56,49 @@
 **STOP**
 - 두 마켓플레이스 이름을 모두 따라 읽게 한다.
 
-### Step 2 — `/plugins` GUI로 플러그인 설치 (A안 · 권장)
+### Step 2 — `/plugins` GUI 열어서 구경 (설치는 선택)
+
+> **중요 — 2026-04 현재 알려진 제약**
+> - Claude Code VSCode extension의 `/plugins` UI는 **탭 2개**만 있습니다: `Plugins` | `Marketplaces`. (Discover 탭 같은 건 없음)
+> - `Plugins` 탭 안에서 위쪽이 **Installed plugins**(설치된 것), 아래쪽이 **Available plugins**(설치 가능 목록)입니다. 같은 탭 안에서 스크롤로 구분됩니다.
+> - gptaku_plugins / tofukyung-plugins는 내부 플러그인을 **git submodule**로 관리하는데, Claude Code가 서브모듈을 자동 초기화하지 않는 [알려진 버그 #17293](https://github.com/anthropics/claude-code/issues/17293) 때문에 `/plugins` GUI에서 Install을 눌러도 슬래시 커맨드가 등록되지 않을 수 있습니다.
+> - 이 실습에서는 **"플러그인 시스템이 뭔지 눈으로 보는 것"**까지만 목표로 하고, 실제 기능은 Claude 네이티브로 진행합니다.
+
 강사 멘트:
-"VSCode 화면 오른쪽 Claude Code 채팅창에 `/plugins`라고 입력해보세요. 그러면 관리 창이 열립니다."
+"VSCode 오른쪽 Claude Code 채팅창에 `/plugins`라고 입력해보세요. 이건 스마트폰의 '앱 설치 화면'과 비슷한 Claude Code의 플러그인 관리 창입니다. 오늘은 이 화면이 있다는 걸 한 번 보는 게 목표예요."
 
 **ACTION**
-1. 수강생에게 Claude Code 채팅창에 `/plugins` 입력하게 한다.
-2. 4개 탭(Discover / Installed / Marketplaces / Errors)이 뜨는 것을 보여준다.
-3. **Marketplaces 탭** 클릭 → `gptaku`, `tofukyung-plugins` 두 항목이 이미 인식되어 있음을 확인한다.
-   - 만약 보이지 않으면 `.claude/settings.json` 파일이 로드되지 않은 것 → VSCode를 Reload Window로 재시작.
-4. **Discover 탭** 클릭 → 설치 가능한 플러그인 목록이 표시된다.
-5. 아래 플러그인을 찾아 **Install 버튼**을 클릭하게 한다.
-   - `바르다-깃선생` (gptaku 마켓플레이스) — **선택** (오늘은 Claude 자연어 Git 경로를 우선 사용)
-   - `docs-guide` (gptaku 마켓플레이스) — 공식 문서 기반 Q&A
-   - `prompt-engineering-skills` (tofukyung-plugins 마켓플레이스)
-   - `knowledge-manager` (tofukyung-plugins 마켓플레이스)
-6. 설치가 끝나면 채팅창에 `/reload-plugins`를 입력해 즉시 반영한다.
-7. **Installed 탭**으로 돌아가 설치한 플러그인이 토글 ON 상태인지 확인한다.
+1. 수강생에게 Claude Code 채팅창에 `/plugins`를 입력하게 한다.
+2. 창이 열리면 상단에 탭이 **두 개** (`Plugins`, `Marketplaces`)인 걸 확인하게 한다.
+3. **Marketplaces 탭**을 먼저 클릭한다.
+   - 이 폴더의 `.claude/settings.json`에 사전 등록된 `gptaku`, `tofukyung-plugins` 두 항목이 이미 보여야 한다.
+   - 안 보이면 `Developer: Reload Window` 실행 후 재확인.
+4. **Plugins 탭**으로 돌아간다.
+   - 위쪽 `Installed plugins` 섹션 — 이미 설치된 게 있으면 보인다 (처음이면 비어 있음).
+   - 아래쪽 `Available plugins` 섹션 — 사전 등록된 마켓플레이스에서 가져온 설치 가능 목록. 여기에 `git-teacher`, `docs-guide`, `show-me-the-prd` 등이 보여야 한다.
+5. (선택) 실제 Install을 시도하고 싶으면 `docs-guide` 하나만 Install 버튼 클릭.
+   - 설치 후 배너가 뜨면 Restart, 안 뜨면 `Developer: Reload Window`.
+   - 성공하면 `/` 메뉴에 `/docs-guide:...` 형태의 네임스페이스 커맨드가 등장할 것.
+   - **실패해도 정상** — 위에 적은 submodule 버그 때문이며, 오늘 실습에는 영향 없음.
 
 강사 멘트:
-"이 UI가 CLI 명령과 똑같은 역할을 합니다. 타이핑 실수가 없으니 훨씬 안전해요."
+"설치가 실패해도 괜찮습니다. 오늘 중요한 건 '이 창이 있고, 나중에 여기서 새 도구를 붙일 수 있다'는 감각이에요. 실제 실습은 바로 이어서 Claude에게 말로 시키는 방식으로 합니다."
 
 **USER**
 - `/plugins` 실행
-- Discover 탭에서 최소 2개 플러그인 Install
-- `/reload-plugins` 실행
-- Installed 탭에서 토글 ON 확인
+- 두 탭(`Plugins`, `Marketplaces`) 각각 한 번씩 클릭
+- Marketplaces 탭에 gptaku/tofukyung-plugins 보이는지 확인
+- (선택) docs-guide 하나만 Install 시도
+- 창 닫기
 
 **STOP**
-- 전원이 Installed 탭에서 본인 플러그인을 확인했는지 체크
-- `/plugins`가 안 뜨는 수강생 → 채팅창이 Claude Code 사이드바인지 확인 + Reload Window
+- 전원이 `/plugins` 창을 한 번씩 열어봤는지 체크
+- Install 성공/실패는 체크 포인트가 아님 — 창을 본 것이 중요
+- 10분 이상 Install에 매이지 말 것
 
-### Step 2-B — 채팅창 명령어 방식 (B안 · GUI가 막힐 때)
-Step 2가 막힌 수강생에게만 사용하는 대체 경로입니다.
+### Step 2-B — 채팅창 명령어? (없습니다)
 
-**ACTION**
-- Claude Code 채팅창에 순서대로 입력하게 한다.
-  1. `/plugin marketplace add fivetaku/gptaku_plugins`
-  2. `/plugin marketplace add treylom/tofukyung-plugins`
-  3. `/plugin install 바르다-깃선생@gptaku`
-  4. `/plugin install docs-guide@gptaku`
-  5. `/plugin install prompt-engineering-skills@tofukyung-plugins`
-  6. `/reload-plugins`
-- 각 명령어 뒤에 Claude가 승인을 요청하면 `Enter` 또는 Approve를 선택하게 한다.
-
-강사 멘트:
-"A안이 안 되면 이 방법을 씁니다. 채팅창에서도 CLI와 똑같이 동작합니다. 단, URL 오타가 있으면 멈추니까 복사-붙여넣기를 권장해요."
-
-**STOP**
-- 설치 실패 메시지가 뜨면 에러 내용을 같이 읽고 네트워크/URL 점검
-- 그래도 안 되면 강사가 화면 공유로 대신 실행 후 설치 폴더만 수강생에게 복사
+> CLI에서 쓰는 `/plugin marketplace add URL`, `/plugin install NAME` 같은 **서브커맨드는 VSCode extension 채팅창에서 동작하지 않습니다**. 공식 문서에도 "VS Code Extension: Subset (type / to see available)"라고 명시되어 있습니다. B안 같은 건 없습니다 — `/plugins` GUI가 유일한 경로입니다.
 
 ### Step 3 — 설치한 항목의 역할 확인
 **ACTION**
@@ -262,9 +255,10 @@ Claude Code 채팅창에 아래처럼 요청한다.
 |------|------|
 | `/plugins` 입력해도 아무 반응 없음 | Claude Code extension 버전 확인 (v2.0 이상 필요) → VSCode Extensions에서 업데이트 |
 | Marketplaces 탭에 gptaku/tofukyung-plugins 안 보임 | `.claude/settings.json` 로드 실패 → Reload Window (Ctrl+Shift+P → "Developer: Reload Window") |
-| Install 버튼 클릭 후 멈춤 | 네트워크/VPN 문제 → VPN 해제 후 재시도, 또는 Step 2-B 채팅창 명령 방식으로 전환 |
-| `/reload-plugins` 이후에도 적용 안 됨 | Reload Window로 VSCode 자체 재시작 |
-| 설치 완료했는데 Installed 탭에 토글이 OFF | 토글을 클릭해 ON으로 바꾸기 |
+| Plugins 탭에 Available 섹션이 안 보임 | 탭 안에서 **아래로 스크롤**. Installed 섹션 바로 아래에 있음 |
+| Install 눌렀는데 슬래시 커맨드가 안 뜸 | Anthropic submodule 버그 [#17293](https://github.com/anthropics/claude-code/issues/17293). 오늘 실습에는 영향 없음 — 정상 진행 |
+| `Discover` / `Errors` 탭이 안 보임 | 그런 탭 없음. 실제로는 `Plugins`, `Marketplaces` 2개 탭만 존재 |
+| 설치 완료했는데 Installed 섹션에 토글이 OFF | 토글을 클릭해 ON으로 바꾸기 |
 
 ### Git / GitHub
 | 증상 | 해결 |
@@ -286,11 +280,10 @@ Claude Code 채팅창에 아래처럼 요청한다.
 "이제 Claude Code는 그냥 채팅창이 아닙니다. 플러그인이 붙었고, VSCode가 GitHub 인증을 기억하고 있고, 나를 알려주는 파일도 생겼습니다. 다음 실습에서는 설치한 도구를 실제로 둘러보고, 내 업무에 언제 쓸지까지 정리해봅니다."
 
 ## 체크리스트
-- [ ] `/plugins` GUI 열기 완료
+- [ ] `/plugins` GUI 열기 완료 (Plugins / Marketplaces 2탭 확인)
 - [ ] Marketplaces 탭에서 gptaku/tofukyung-plugins 인식 확인
-- [ ] Discover 탭에서 플러그인 최소 2개 Install 완료
-- [ ] `/reload-plugins` 실행 완료
-- [ ] Installed 탭에서 토글 ON 확인
+- [ ] Plugins 탭 스크롤해서 Available plugins 섹션 구경
+- [ ] (선택) docs-guide 1개만 Install 시도 — 성공/실패 무관
 - [ ] `student-profile.md` 생성 완료
 - [ ] `sonnet` + `medium` 설정 체험 완료
 - [ ] GitHub 레포 생성 + URL 복사 완료

@@ -65,11 +65,9 @@
 
 **ACTION**
 1. 채팅창에 `/plugins`를 입력해 **Manage plugins UI**를 연다.
-2. 4개 탭을 한 바퀴 돌게 한다.
-   - **Discover** → 설치 가능한 플러그인 목록 (마켓플레이스에서 제공 중인 것)
-   - **Installed** → 내가 설치한 플러그인 + 토글(on/off)
-   - **Marketplaces** → 등록된 마켓플레이스 목록 (gptaku, tofukyung-plugins가 보여야 정상)
-   - **Errors** → 로딩 오류 확인 (비어 있으면 정상)
+2. 탭 **2개**를 한 바퀴 돌게 한다. (공식 문서 기준 VSCode extension은 2탭)
+   - **Plugins 탭** — 위쪽 `Installed plugins`(설치된 것 + on/off 토글), 아래쪽 `Available plugins`(설치 가능 목록). 같은 탭 안에서 스크롤로 구분.
+   - **Marketplaces 탭** — 등록된 마켓플레이스 목록 (gptaku, tofukyung-plugins가 보여야 정상). URL 직접 추가도 여기서 가능.
 3. 아래를 행동 중심으로 짧게 짚는다.
    - **바르다-깃선생** = 저장해줘 / 올려줘 흐름을 도와주는 Git capability (보조)
    - **docs-guide** = 공식 문서 기준으로 덜 헷갈리게 찾는 capability
@@ -80,14 +78,15 @@
    - 또는 강사가 지정한 설치된 capability 1개
 
 **USER**
-- `/plugins` 4탭 확인 (Discover, Installed, Marketplaces, Errors)
-- Installed 탭에서 내 플러그인 토글 상태 확인
-- 설치된 capability 1개 직접 실행
+- `/plugins` 2탭(Plugins, Marketplaces) 확인
+- Plugins 탭 안에서 Installed / Available 섹션을 스크롤로 확인
+- Marketplaces 탭에서 gptaku/tofukyung-plugins 인식 확인
+- (플러그인이 실제로 설치되어 있다면) capability 1개 직접 실행 시도
 
 **STOP**
-- 전원이 capability 1개를 실제로 실행했는지 확인
-- 결과가 어색해도 괜찮고, "실행해봤다"가 먼저입니다.
-- Installed 탭이 비어 있는 수강생 → Practice 02 Step 2로 돌아가 재설치
+- 전원이 `/plugins` 창을 2탭 다 봤는지 확인
+- Installed 섹션이 비어 있어도 정상 — submodule 버그로 설치가 완료되지 않았을 수 있음 (Practice 02의 주의사항 참조)
+- capability 실행이 막히면 built-in `/prompt`, brainstorming 등 user-scope 스킬로 대체
 
 ### Step 3 — using-superpowers 확인 + brainstorming 체험
 강사 멘트:
@@ -129,8 +128,8 @@
 - 어려워하면 "이름 설명"보다 "내 업무에서 언제 쓸지"를 더 중요하게 남기게 한다.
 
 ## 트러블슈팅
-- `/plugins` 입력해도 반응 없음 → Claude Code extension 버전 확인, Reload Window
-- Installed 탭이 비어 있음 → Practice 02 Step 2 재진행
+- `/plugins` 입력해도 반응 없음 → Claude Code extension v2.0+ 확인, Reload Window
+- Plugins 탭 Installed 섹션이 비어 있음 → submodule 버그(Anthropic #17293)로 Available에서 Install 해도 빈 폴더로 설치될 수 있음. 오늘은 넘어가고 built-in 스킬로 대체
 - Marketplaces 탭에 gptaku/tofukyung-plugins 안 보임 → `.claude/settings.json` 로드 실패 → Reload Window
 - capability 실행 결과가 어색함 → 결과 품질보다 직접 실행 완료를 우선
 - `my-installed-tools.md`가 너무 이론적으로 됨 → "언제 쓸지" 문장을 먼저 보강
@@ -144,9 +143,10 @@
 "이제 여러분은 설치된 도구를 그냥 이름으로만 아는 게 아니라, 하나를 직접 실행했고, 내 업무에서 언제 쓸지까지 적었습니다. 다음 실습에서는 이 감각을 자기 부서 데이터에 직접 붙여봅니다."
 
 ## 체크리스트
-- [ ] `/plugins` 4탭 확인 완료 (Discover/Installed/Marketplaces/Errors)
-- [ ] Installed 탭에서 본인 플러그인 토글 ON 확인
-- [ ] 설치된 capability 1개 직접 실행 완료
+- [ ] `/plugins` 2탭 확인 완료 (Plugins / Marketplaces)
+- [ ] Plugins 탭 안에서 Installed + Available 섹션 스크롤로 확인
+- [ ] Marketplaces 탭에서 gptaku/tofukyung-plugins 사전 등록 확인
+- [ ] capability 1개 실행 (설치된 것이든 user-scope built-in이든)
 - [ ] brainstorming 비교 체험 완료
 - [ ] `my-installed-tools.md` 생성 완료
 - [ ] capability 사용 시점 한 줄 작성 완료
