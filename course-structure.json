@@ -68,6 +68,12 @@
       "name": "배포와 공유",
       "module": "practice-09-deploy-and-share",
       "command": "/start-practice-09"
+    },
+    {
+      "id": "practice-10",
+      "name": "나만의 스킬 + 주간 점검 + MW6 예고",
+      "module": "practice-10-skill-creation",
+      "command": "/start-practice-10"
     }
   ],
   "participants": {

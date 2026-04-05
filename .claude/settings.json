@@ -1,21 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "_comment_marketplaces": "수강생이 이 폴더를 열면 Claude Code VSCode extension이 자동으로 아래 마켓플레이스를 인식합니다. /plugins 입력 → Plugins 탭 안의 Available plugins 섹션에서 Install 버튼 클릭. (Anthropic #17293 submodule 버그로 설치가 비어있을 수 있음)",
-  "extraKnownMarketplaces": {
-    "gptaku": {
-      "source": {
-        "source": "github",
-        "repo": "fivetaku/gptaku_plugins"
-      }
-    },
-    "tofukyung-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "treylom/tofukyung-plugins"
-      }
-    }
-  },
   "_comment_permissions": "git-teacher 플러그인과 Claude 네이티브 Git 워크플로우가 초보 수강생 PC에서 매끄럽게 동작하도록 사전 승인 목록. 수강생이 매 git/gh 명령마다 승인 팝업을 만나지 않도록 project-scope로 허용합니다. 위험한 명령(rm -rf, curl, sudo 등)은 allow하지 않습니다.",
+  "_comment_marketplaces_removed": "v2.4 설계: extraKnownMarketplaces 블록은 제거됐습니다. 수강생이 Practice 02에서 3개 마켓 URL(gptaku, superpowers-marketplace, tofukyung-plugins)을 직접 타이핑하여 등록하는 흐름으로 전환했습니다. 자동 등록 대신 '직접 등록 경험'이 학습 목표입니다.",
   "permissions": {
     "allow": [
       "Bash(git:*)",
