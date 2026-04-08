@@ -1,4 +1,4 @@
-timestamp,cell_id,voltage_V,temperature_C,current_A,soc_pct,status
+﻿timestamp,cell_id,voltage_V,temperature_C,current_A,soc_pct,status
 2026-04-01 08:10,CELL-A02,3.69,26.2,12.4,79,normal
 2026-04-07 14:20,CELL-A05,3.66,27.4,13.0,77,normal
 2026-04-15 09:40,CELL-A01,3.71,25.9,11.8,81,normal

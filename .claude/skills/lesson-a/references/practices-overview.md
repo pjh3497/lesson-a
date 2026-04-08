@@ -21,8 +21,9 @@ disable-model-invocation: true
 | 05 | 결과 다듬기 + 저장 | `/start-practice-05` | 확장 결과 파일 + push | P04 |
 | 06 | CLAUDE.md 규칙 설계 | `/start-practice-06` | Always/Ask/Never CLAUDE.md | P01~05 |
 | 07 | 구조가 결과를 바꾼다 | `/start-practice-07` | A/B/C 비교 + /prompt 결과 | P06 |
-| 08 | 부서별 통합 파이프라인 | `/start-practice-08` | 통합 분석 보고서 | P07 |
-| 09 | 배포와 공유 | `/start-practice-09` | HTML 대시보드 + Vercel URL | P08 |
+| 08 | 실무 반복 파이프라인 | `/start-practice-08` | 부서별 루프 결과 + before/after | P07 |
+| 09 | 하네스 + 나만의 스킬 + MW6 예고 | `/start-practice-09` | `my-weekly-check.md` + 스킬 1개 | P08 |
+| SPARE | [스페어] Vercel 배포 | `/start-practice-SPARE` | Vercel URL (시간 여유 시) | P09 |
 
 ---
 
@@ -45,8 +46,8 @@ disable-model-invocation: true
 |------|------|--------------|------|
 | 1교시 | 08:00~08:45 | Practice 06 | 복습 + CLAUDE.md 설계 |
 | 2교시 | 09:00~09:45 | Practice 07 | 3층 비교 실험 + /prompt |
-| 3교시 | 10:00~10:45 | Practice 08 | Plan 모드 + 멀티파일 |
-| 4교시 | 11:00~11:45 | Practice 09 | HTML + Vercel 배포 |
+| 3교시 | 10:00~10:45 | Practice 08 | 실무 반복 파이프라인 (/using-superpowers + deep-research) |
+| 4교시 | 11:00~11:45 | Practice 09 | 하네스 + 스킬 생성 + 복습 + MW6 예고 |
 
 ---
 

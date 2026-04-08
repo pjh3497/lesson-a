@@ -1,4 +1,4 @@
-part_id,part_name,max_stress_MPa,safety_factor,thickness_mm,material,test_date
+﻿part_id,part_name,max_stress_MPa,safety_factor,thickness_mm,material,test_date
 P001,프론트 브라켓,487.3,2.15,3.2,SPCC,2026-01-15
 P002,리어 마운트,523.8,1.87,2.8,SAPH440,2026-01-15
 P003,배터리 케이스 상판,462.1,2.34,2.5,Al5052,2026-01-16

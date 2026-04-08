@@ -65,15 +65,16 @@
     },
     {
       "id": "practice-09",
-      "name": "배포와 공유",
-      "module": "practice-09-deploy-and-share",
+      "name": "하네스 엔지니어링 + 나만의 스킬 + MW6 예고",
+      "module": "practice-09-harness-and-skill",
       "command": "/start-practice-09"
     },
     {
-      "id": "practice-10",
-      "name": "나만의 스킬 + 주간 점검 + MW6 예고",
-      "module": "practice-10-skill-creation",
-      "command": "/start-practice-10"
+      "id": "practice-SPARE",
+      "name": "[스페어] Vercel 배포 (시간 여유 시)",
+      "module": "practice-SPARE-vercel-deploy",
+      "command": "/start-practice-SPARE",
+      "spare": true
     }
   ],
   "participants": {

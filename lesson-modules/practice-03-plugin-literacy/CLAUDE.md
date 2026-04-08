@@ -77,11 +77,11 @@
    - **Marketplaces 탭** — Practice 02에서 여러분이 직접 등록한 **3개 마켓**(gptaku, superpowers, tofukyung-plugins) 목록. URL 직접 추가/삭제도 여기서 가능해요.
 3. 아래를 행동 중심으로 짧게 짚는다.
    - **바르다-깃선생** = 저장해줘 / 올려줘 흐름을 도와주는 Git capability (보조)
-   - **docs-guide** = 공식 문서 기준으로 덜 헷갈리게 찾는 capability
+   - **deep-research** = 여러 소스를 교차 검증하며 깊이 있게 조사해주는 capability
    - **prompt-engineering-skills / knowledge-manager** = 강의/업무 연결에 쓰는 capability 묶음
    - **using-superpowers / brainstorming 계열** = 바로 답하게 하기보다 먼저 순서를 잡게 도와주는 workflow capability
 4. 전원이 **설치된 capability 1개를 직접 실행**하게 한다.
-   - 권장 공통 예시: `Plan 모드가 뭐야? 공식 문서 기준으로 3줄로 설명해줘`
+   - 권장 공통 예시: `우리 회사 업종에서 AI 도입 성공사례 3가지를 간단히 조사해줘`
    - 또는 강사가 지정한 설치된 capability 1개
 
 **USER**
@@ -104,13 +104,16 @@
 2. `품질 개선 방향을 브레인스토밍해줘` (C그룹 예시)
 3. AI가 질문: "어떤 관점에서요?" "제약 조건은?" ...
 4. 대화 후 구조화된 아이디어 목록 생성
+5. 아까 deep-research로 자료를 조사하고, 여기서 brainstorming으로 아이디어를 발전시키면 시너지가 납니다.
 
 **USER**
 - brainstorming 체험
 - "아까 그냥 물어봤을 때 vs 지금 비교해보세요. 뭐가 달라요?"
+- "deep-research로 조사한 내용을 brainstorming에서 발전시키면 어떻게 달라지나요?"
 
 **STOP**
 - 핵심: "AI에게 구조적으로 물어보면 더 깊은 답이 나온다"
+- deep-research(조사) + brainstorming(발전)의 조합 시너지를 체감했는지 확인
 
 ### Step 4 — 공통 산출물 my-installed-tools.md 만들기
 강사 멘트:

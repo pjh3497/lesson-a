@@ -1,4 +1,4 @@
-category,item,apr_budget,apr_actual,may_budget,may_actual,jun_budget,jun_actual,quarter_budget,quarter_actual,achievement_rate,unit
+﻿category,item,apr_budget,apr_actual,may_budget,may_actual,jun_budget,jun_actual,quarter_budget,quarter_actual,achievement_rate,unit
 인건비,정규직,280,281,280,282,280,283,840,846,100.7%,백만원
 인건비,계약직,42,43,44,45,44,44,130,132,101.5%,백만원
 원자재,강판,540,548,550,562,555,569,1645,1679,102.1%,백만원

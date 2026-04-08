@@ -1,4 +1,4 @@
-date,line,shift,defect_type,quantity,part_name,inspector
+﻿date,line,shift,defect_type,quantity,part_name,inspector
 2026-01-03,L2,주간,도장불량,5,크로스멤버D,박검사
 2026-01-04,L1,야간,치수불량,4,마운트B,김검사
 2026-01-04,L3,야간,기능불량,5,브라켓A,최검사

@@ -12,7 +12,7 @@
 `start-practice-02` 커맨드가 시작 시 `student-profile.md`를 Read 시도하지만, 아직 파일이 없을 거예요. 이 실습의 중심 활동이 바로 이 파일을 **superpowers:brainstorming** 스킬로 만드는 것입니다(Step 4). 인터뷰가 끝나면 수강생 맞춤 프로필이 완성됩니다.
 
 ## 실습 목표
-- **3개 마켓플레이스(gptaku, superpowers, tofukyung-plugins)의 GitHub URL을 `/plugins` Marketplaces 탭에 직접 등록하고, 핵심 플러그인 4개를 Install한다.**
+- **3개 마켓플레이스(gptaku, superpowers, tofukyung-plugins)의 GitHub URL을 `/plugins` Marketplaces 탭에 직접 등록하고, 핵심 플러그인 4개(바르다-깃선생, deep-research, superpowers, skills-2.0-upgrade)를 Install한다.**
 - **superpowers:brainstorming** 스킬을 활용한 인터뷰 대화로 `student-profile.md`를 생성하고 피드백 루프로 다듬는다.
 - `sonnet` + `medium` 설정을 한 번 체험한다.
 - **VSCode의 Git Credential Manager 인증 경로로** 첫 commit/push를 완료한다.
@@ -23,7 +23,7 @@
 ## 성공 기준
 - `/plugins` Marketplaces 탭에 **3개 마켓이 모두 등록**되어 있다 (gptaku, superpowers, tofukyung-plugins).
 - 수강생이 설치한 플러그인 각각의 역할을 자기 말로 한 줄씩 설명할 수 있다.
-- Plugins 탭의 Available plugins 섹션에서 최소 **4개 플러그인(바르다-깃선생, docs-guide, superpowers, skills-2.0-upgrade)을 Install 시도**했다 (submodule 버그로 일부 실패해도 시도 자체가 성공 기준).
+- Plugins 탭의 Available plugins 섹션에서 최소 **4개 플러그인(바르다-깃선생, deep-research, superpowers, skills-2.0-upgrade)을 Install 시도**했다 (submodule 버그로 일부 실패해도 시도 자체가 성공 기준).
 - `student-profile.md`가 superpowers:brainstorming 인터뷰 결과로 생성되고, 최소 1회 피드백 수정이 반영되었다.
 - `sonnet` + `medium` 설정을 한 번 실행해본다.
 - GitHub 저장소에 첫 commit과 push가 반영된다.
@@ -50,7 +50,7 @@
 
 **ACTION**
 - 화면에 오늘 등록할 3개 마켓플레이스를 적어 주세요.
-  - **gptaku 마켓플레이스** (`fivetaku/gptaku_plugins`) — 바르다-깃선생, docs-guide 등 실무 도구 묶음
+  - **gptaku 마켓플레이스** (`fivetaku/gptaku_plugins`) — 바르다-깃선생 등 실무 도구 묶음
   - **superpowers 마켓플레이스** (`obra/superpowers-marketplace`) — brainstorming, using-superpowers 등 작업 구조 잡기용 스킬 묶음
   - **tofukyung-plugins 마켓플레이스** (`treylom/tofukyung-plugins`) — 강의 실습용 도구 묶음 (skills-2.0-upgrade 포함)
 
@@ -99,7 +99,7 @@
 1. `/plugins` UI에서 **Plugins 탭**으로 이동합니다.
 2. 탭 안 아래쪽 **Available plugins** 섹션(스크롤)에서 아래 4개를 하나씩 찾아 **Install** 버튼을 눌러 주세요.
    - **바르다-깃선생** (gptaku) — Git 저장/올리기 도우미
-   - **docs-guide** (gptaku) — 공식 문서 기반 검색
+   - **deep-research** (tofukyung-plugins) — AI 기반 딥리서치 도구
    - **superpowers** (obra/superpowers-marketplace) — brainstorming 등 작업 구조 스킬
    - **skills-2.0-upgrade** (tofukyung-plugins) — 4교시에 사용할 스킬 품질 진단 도구
 3. 각 Install 후 하단 배너가 뜨면 Restart 클릭, 안 뜨면 `Developer: Reload Window`.
@@ -120,18 +120,21 @@
 **ACTION**
 - 아래 4가지를 짧게 정리해준다.
   - **바르다-깃선생** → "저장해줘 / 올려줘" 흐름 도우미
-  - **docs-guide** → 공식 문서 기반 검색. 일반 웹 결과보다 신뢰성 ↑
+  - **deep-research** → AI가 여러 소스를 교차 검증하며 깊이 있는 조사를 해주는 도구
   - **superpowers** → brainstorming, using-superpowers 등 **작업 순서를 잡아주는 스킬 묶음**. 다음 Step 4에서 바로 사용합니다.
   - **skills-2.0-upgrade** → 기존 스킬 품질을 진단하는 도구. 4교시에 직접 써볼 예정.
-- docs-guide 예시 질문을 1개 시연한다.
-  - 예: `Plan 모드가 뭐야? 공식 문서에서 찾아서 설명해줘`
+- deep-research 예시 질문을 1개 시연한다.
+  - 예: `우리 부서에서 AI를 활용한 품질개선 사례를 간단히 조사해줘`
+- deep-research는 공식 문서 검색이 아니라, 여러 자료를 교차 검증하며 조사해줍니다. 다음 실습들에서 더 깊게 써볼 거예요.
+
+> **참고**: 이전에 사용하던 docs-guide 플러그인은 공식 문서 전체를 검색하고 처리하는 방식이라 10분 이상 소요될 수 있습니다. deep-research는 목적에 맞는 소스만 선별 조사하므로 더 빠르고 실용적입니다.
 
 **USER**
-- docs-guide가 "공식 문서 기반"이라는 느낌을 확인한다.
+- deep-research가 "여러 소스를 교차 검증하며 조사해주는 도구"라는 느낌을 확인한다.
 - 설치한 플러그인 각각의 용도를 한 줄씩 메모한다.
 
 **STOP**
-- "검색이 아니라 공식 문서 기반이구나"를 이해했는지 확인
+- "단순 검색이 아니라 여러 소스를 교차 검증해서 조사해주는 도구구나"를 이해했는지 확인
 
 ### Step 4 — superpowers:brainstorming 인터뷰로 student-profile.md 생성
 강사 멘트:
@@ -317,7 +320,7 @@ Claude Code 채팅창에 아래처럼 요청한다.
 ## 체크리스트
 - [ ] `/plugins` Marketplaces 탭 열기 완료
 - [ ] 3개 마켓플레이스 URL 직접 등록 완료 (gptaku, superpowers, tofukyung-plugins)
-- [ ] Plugins 탭 Available plugins 섹션에서 4개 플러그인 Install 시도 (바르다-깃선생, docs-guide, superpowers, skills-2.0-upgrade)
+- [ ] Plugins 탭 Available plugins 섹션에서 4개 플러그인 Install 시도 (바르다-깃선생, deep-research, superpowers, skills-2.0-upgrade)
 - [ ] superpowers:brainstorming 인터뷰로 `student-profile.md` 생성 완료
 - [ ] 피드백 루프 최소 1회 수정 반영 완료
 - [ ] `sonnet` + `medium` 설정 체험 완료

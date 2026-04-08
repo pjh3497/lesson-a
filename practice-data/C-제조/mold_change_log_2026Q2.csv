@@ -1,4 +1,4 @@
-change_date,mold_id,part_name,line,reason,before_defect_rate_pct,after_defect_rate_pct,shot_count_at_change,max_shots,post_change_status
+﻿change_date,mold_id,part_name,line,reason,before_defect_rate_pct,after_defect_rate_pct,shot_count_at_change,max_shots,post_change_status
 2026-04-02,M003,배터리케이스C,L3,예방교체,2.8,1.4,208900,210000,안정화
 2026-04-04,M007,브라켓A,L1,수명한계근접,2.1,1.0,194200,195000,정상운용
 2026-04-07,M011,힌지플레이트E,L2,치수편차증가,2.4,1.3,153900,155000,정상운용

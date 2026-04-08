@@ -1,4 +1,4 @@
-mold_id,part_name,install_date,shot_count,max_shots,last_maintenance,status
+﻿mold_id,part_name,install_date,shot_count,max_shots,last_maintenance,status
 M001,브라켓A,2025-03-15,185000,200000,2026-01-10,운용중
 M002,마운트B,2025-04-02,162500,180000,2026-01-08,운용중
 M003,배터리케이스C,2025-04-18,201500,210000,2026-01-12,점검예정

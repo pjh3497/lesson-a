@@ -94,12 +94,12 @@ Claude Code에서 아래 명령으로 시작합니다.
 3. `mw4-3` 내 업무 데이터로 작은 분석 시도하기
 4. `mw4-4` 결과 정리 후 GitHub에 저장하기
 
-### MW5 — 심화: CLAUDE.md + 워크플로우 + Vercel 배포
+### MW5 — 심화: CLAUDE.md + 실무 반복 루프 + 하네스 엔지니어링
 
-1. `mw5-1` CLAUDE.md의 의미와 팀 작업 규칙 이해
-2. `mw5-2` 부서별 반복 작업을 프롬프트로 구조화하기
-3. `mw5-3` 결과물 폴더 정리와 발표 자료 연결하기
-4. `mw5-4` 간단한 웹 결과물 또는 문서를 배포해보기
+1. `mw5-1` 재건: 마켓 등록 + 플러그인 설치 + student-profile.md 재생성
+2. `mw5-2` 재건: 도구 목록 정리 + CLAUDE.md Always/Ask/Never 재정립
+3. `mw5-3` 신규: 실무 반복 파이프라인 (/using-superpowers + deep-research)
+4. `mw5-4` 신규: 하네스 엔지니어링 + 나만의 스킬 + MW6 예고
 
 ---
 

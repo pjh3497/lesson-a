@@ -163,9 +163,9 @@ Claude는 스스로 일할 수 있게 도와주는 코치입니다.
 | `/start-practice-05` | 결과 다듬기 + 저장 |
 | `/start-practice-06` | CLAUDE.md 규칙 설계 (Always / Ask / Never) |
 | `/start-practice-07` | 구조가 결과를 바꾼다 (3층 비교 + 프롬프트 4법칙) |
-| `/start-practice-08` | 부서별 통합 파이프라인 (Plan 모드 + 멀티파일) |
-| `/start-practice-09` | 배포와 공유 (HTML 대시보드 + Vercel) |
-| `/start-practice-10` | 나만의 스킬 + 주간 점검 루틴 + MW6 예고 |
+| `/start-practice-08` | 실무 반복 파이프라인 (/using-superpowers + deep-research) |
+| `/start-practice-09` | 하네스 엔지니어링 + 나만의 스킬 + MW6 예고 |
+| `/start-practice-SPARE` | [스페어] Vercel 배포 (시간 여유 시 진행) |
 
 각 실습은 독립적인 단위입니다.
 강사가 안내하는 순서대로 진행하면 됩니다.

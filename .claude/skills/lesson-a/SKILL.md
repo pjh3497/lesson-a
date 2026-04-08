@@ -37,8 +37,9 @@ allowed-tools: Read, Write, Bash, Glob, Grep, AskUserQuestion
 | `/start-practice-05` | 결과 다듬기 + 저장 |
 | `/start-practice-06` | CLAUDE.md 규칙 설계 (Always/Ask/Never) |
 | `/start-practice-07` | 구조가 결과를 바꾼다 (3층 비교 + /prompt) |
-| `/start-practice-08` | 부서별 통합 파이프���인 (Plan 모드) |
-| `/start-practice-09` | 배포와 공유 (HTML + Vercel) |
+| `/start-practice-08` | 부서별 통합 파이프라인 (Plan + /using-superpowers) |
+| `/start-practice-09` | 하네스 엔지니어링 + 나만의 스킬 + MW6 예고 |
+| `/start-practice-SPARE` | [스페어] Vercel 배포 (시간 여유 시) |
 
 ## references/ 구조
 - `references/company-context.md` — 회사 배경, 수강생 환경, 실무 맥락

@@ -1,4 +1,4 @@
-kpi_id,kpi_name,target,Q1_actual,Q2_actual,Q3_actual,Q4_actual,unit
+﻿kpi_id,kpi_name,target,Q1_actual,Q2_actual,Q3_actual,Q4_actual,unit
 K01,매출액,500,478,512,495,520,억원
 K02,영업이익률,12,10.5,11.8,12.3,13.1,%
 K03,신규수주,320,245,301,338,355,억원

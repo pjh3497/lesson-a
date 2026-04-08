@@ -224,9 +224,9 @@ Practice 03 이상을 아무 설명 없이 진행한다.
 | 05 | 결과 다듬기 + 저장 | `/start-practice-05` | 확장 결과 파일 + push |
 | 06 | `CLAUDE.md` 규칙 설계 | `/start-practice-06` | Always/Ask/Never `CLAUDE.md` |
 | 07 | 구조가 결과를 바꾼다 | `/start-practice-07` | A/B/C 비교 + `/prompt` 결과 |
-| 08 | 부서별 통합 파이프라인 | `/start-practice-08` | 통합 분석 보고서 |
-| 09 | 배포와 공유 | `/start-practice-09` | HTML 대시보드 + Vercel URL |
-| 10 | 나만의 스킬 + MW6 예고 | `/start-practice-10` | `my-weekly-check.md` |
+| 08 | 실무 반복 파이프라인 | `/start-practice-08` | 부서별 루프 결과 + before/after |
+| 09 | 하네스 + 나만의 스킬 + MW6 예고 | `/start-practice-09` | `my-weekly-check.md` + 스킬 1개 |
+| SPARE | Vercel 배포 | `/start-practice-SPARE` | Vercel URL (시간 여유 시) |
 
 ---
 
